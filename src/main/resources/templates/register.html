@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>注册页</title>
+	<link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="easyui/demo/demo.css">
+	<script type="text/javascript" src="easyui/jquery.min.js"></script>
+	<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
+</head>
+<body>
+	<p><a href="/login">已注册？去登录</a></p>
+	<div style="margin:20px 0;"></div>
+	<div class="easyui-panel" title="注册新用户" style="width:400px">
+		<div style="padding:10px 60px 20px 60px">
+	    <form id="ff" method="post">
+	    	<table cellpadding="5">
+	    		<tr>
+	    			<td>用户名：</td>
+	    			<td><input class="easyui-textbox" type="text" id="username" data-options="required:true"></input></td>
+	    		</tr>
+	    		<tr>
+	    			<td>密码：</td>
+	    			<td><input class="easyui-textbox" type="password" id="password" data-options="required:true"></input></td>
+	    		</tr>
+	    		<tr>
+	    			<td>确认密码：</td>
+	    			<td><input class="easyui-textbox" type="password" id="confirmpassword" data-options="required:true"></input></td>
+	    		</tr>
+	    	</table>
+	    </form>
+	    <div style="text-align:center;padding:5px">
+	    	<a href="javascript:void(0)" class="easyui-linkbutton" id="submit">注册</a>
+	    	<a href="javascript:void(0)" class="easyui-linkbutton" onclick="clearForm()">清空</a>
+	    </div>
+	    </div>
+	</div>
+	<script>
+		function submitForm(){
+			$('#ff').form('submit');
+		}
+		function clearForm(){
+			$('#ff').form('clear');
+		}
+	</script>
+	<script type="text/javascript" src="js/register.js"></script>
+</body>
+</html>

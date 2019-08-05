@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>编辑页</title>
+
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+<div class="container">
+    <h3>博客：</h3><br>
+    <button class="btn btn-primary" id="bj" style="float: right">编辑</button>
+    <div id="blog">
+        <form>
+            <h4>标题：</h4>
+            <input class="form-control" name="title" id="tle" disabled="disabled" type="text"><br>
+            <h4>内容：</h4>
+            <textarea class="form-control" name="content" rows="30" id="cont" disabled="disabled"></textarea>
+        </form>
+        <button class="btn btn-success" disabled="disabled" style="float: right;margin-top: 10px" id="xg">提交</button>
+        <hr style="margin-top: 80px;">
+    </div>
+    <br>
+    <h3>评论：</h3><br>
+    <div id="pl">
+        <div id="comts"></div>
+        <div id="page_nav_area"></div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="easyui/jquery.min.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/js/artitle.js" type="text/javascript"></script>
+</html>

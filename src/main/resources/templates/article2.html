@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>博客详情页</title>
+
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+</head>
+
+<body>
+<div class="container">
+	<nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/index">首页</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/texteditor">写博客</a></li>
+                        <li><a href="/personal">我的博客</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <h3 id="blog">博客：</h3><br>
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h3 class="panel-title" id="tle"></h3>
+      </div>
+      <div class="panel-body" id="cont">
+      <textarea class="form-control" name="content" rows="30" id="content" disabled="disabled"></textarea>
+      </div>
+    </div>
+    <br>
+    <h3>评论：</h3><br>
+    <input class="form-control" style="width: 500px;
+    height: 100px;" id="comt" disabled="disabled" type="text"><br>
+    <button class="btn btn-success" disabled="disabled" style="float: right;margin-top: 10px;margin-right: 450px;" id="tj">提交</button>
+    <div id="ts"></div>
+    <hr style="margin-top: 80px;">
+    <div id="pl">
+        <div id="comts"></div>
+        <div id="page_nav_area"></div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="easyui/jquery.min.js"></script>
+<script src="/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/js/artitle2.js" type="text/javascript"></script>
+</html>

@@ -1,0 +1,40 @@
+$(function(){
+	$('#submit').click(function(){
+		var username=$('#username').val();
+		var password=$('#password').val();
+		var confirmpassword=$('#confirmpassword').val();
+		if(password!=confirmpassword){
+			$.toast("两次密码不一致！");
+		}else{
+			$.ajax({
+				url:'/getuser',
+				type:"post",
+				data:{
+					username:username
+				},
+				success:function(data){
+					if(data.count==0){
+						$.ajax({
+							url:'/saveuser',
+							type:"post",
+							data:{
+								username:username,
+								password:password
+							},
+							success:function(data){
+								if(data.success){
+									alert('注册成功！');
+									window.location.href='/login';
+								}else{
+									alert('注册失败！');
+								}
+							}
+						});
+					}else{
+						alert('该用户名已注册！');
+					}
+				}
+			});									
+		}
+	});
+});
