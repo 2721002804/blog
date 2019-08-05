@@ -1,1 +1,1 @@
-# public-blog
+# blog
